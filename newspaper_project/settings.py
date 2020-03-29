@@ -37,11 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3rd Party
     'crispy_forms',
 
     # Local
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +139,5 @@ import base64
 EMAIL_HOST_PASSWORD = base64.b64decode(open('../gmailpw').readlines()[0].encode('ascii')).decode('ascii')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+TIME_ZONE = 'America/New_York'
